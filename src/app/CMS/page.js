@@ -1,6 +1,27 @@
 import Image from "next/image";
 import React from "react";
 
+const meta = {
+  title: "Content Management System - CMS",
+  description:
+    "CMS Portal that integrates all essential features an ideal CMS should have, focusing on both security and ease of use. The UI is tailored to enhance efficiency and usability, ensuring that content management is as seamless and intuitive as possible.",
+};
+export const metadata = {
+  title: meta.title,
+  description: meta.description,
+  openGraph: {
+    type: "website",
+    title: meta.title,
+    description: meta.description,
+    siteName: "Om Thakkar",
+  },
+  twitter: {
+    creator: "Om Thakkar",
+    site: "@iamomthakkar",
+    title: meta.title,
+    description: meta.description,
+  },
+};
 function CMS() {
   return (
     <div className="p-6 text-left text-light-gray">
