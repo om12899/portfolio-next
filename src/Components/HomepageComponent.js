@@ -62,7 +62,7 @@ function HomepageComponent() {
                     backgroundImage: `url("https://portfolio-images-2.s3.ap-south-1.amazonaws.com/turia1.jpeg")`,
                   }}
                 >
-                  <Link href="/turia">
+                  <Link href="/turia-website">
                     <div className="absolute inset-0 bg-light-blue bg-opacity-90 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
                       <p className="text-dark-gray font-semibold text-xl">
                         Turia - Website
