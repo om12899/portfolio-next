@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import { faArchive, faHome, faPerson } from "@fortawesome/free-solid-svg-icons";
 
