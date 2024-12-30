@@ -1,101 +1,138 @@
+"use client";
+import Layout from "@/Layout/Layout";
 import Image from "next/image";
+import Link from "next/link";
 
-export default function Home() {
+import { TypeAnimation } from "react-type-animation";
+
+function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <Layout>
+      <div>
+        <div className="text-lg md:text-2xl mt-4 md:mt-8 text-center font-semibold text-light-blue/70">
+          <TypeAnimation
+            sequence={[
+              "Creating Inclusive Experiences,", // Types 'One'
+              2000, // Waits 2s
+              // "Pixel by Pixel.", // Deletes 'One' and types 'Two'
+              // 2000, // Waits 2s
+            ]}
+            wrapper="span"
+            cursor={false}
+            repeat={1}
+            style={{ fontSize: "1.5em", display: "inline-block" }}
+            className="text-light-blue"
+            speed={25}
+          />{" "}
+          <div className=" md:my-4"></div>
+          <TypeAnimation
+            sequence={[
+              // "Creating Inclusive Experiences.", // Types 'One'
+              2500,
+              "Pixel by Pixel.", // Deletes 'One' and types 'Two'
+              2000, // Waits 2s
+            ]}
+            wrapper="span"
+            cursor={false}
+            repeat={1}
+            style={{ fontSize: "1.5em", display: "inline-block" }}
+            speed={25}
+          />
+          <div>
+            <div className="p-4 mt-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                {/* CMS */}
+                <div
+                  className="relative w-full pb-[100%] bg-left bg-cover group"
+                  style={{
+                    backgroundImage: `url("https://portfolio-images-2.s3.ap-south-1.amazonaws.com/CMS1.png")`,
+                  }}
+                >
+                  <Link href="/cms">
+                    <div className="absolute inset-0 bg-light-blue bg-opacity-90 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+                      <p className="text-dark-gray font-semibold text-xl">
+                        Content Management System
+                      </p>
+                    </div>
+                  </Link>
+                </div>
+                {/* Turia */}
+                <div
+                  className="relative w-full pb-[100%] bg-center bg-cover group"
+                  style={{
+                    backgroundImage: `url("https://portfolio-images-2.s3.ap-south-1.amazonaws.com/turia1.jpeg")`,
+                  }}
+                >
+                  <Link href="/turia">
+                    <div className="absolute inset-0 bg-light-blue bg-opacity-90 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+                      <p className="text-dark-gray font-semibold text-xl">
+                        Turia - Website
+                      </p>
+                    </div>
+                  </Link>
+                </div>
+                {/* StitchCraft */}
+                <div
+                  className="relative w-full pb-[100%] bg-left bg-cover group"
+                  style={{
+                    backgroundImage: `url("https://portfolio-images-2.s3.ap-south-1.amazonaws.com/tailor-ecom-1.png")`,
+                  }}
+                >
+                  <Link href="/stitchcraft">
+                    <div className="absolute inset-0 bg-light-blue bg-opacity-90 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+                      <p className="text-dark-gray font-semibold text-xl">
+                        StitchCraft - Ecommerce for Tailors
+                      </p>
+                    </div>
+                  </Link>
+                </div>
+                {/* Tattoo */}
+                <div
+                  className="relative w-full pb-[100%] bg-center bg-cover group"
+                  style={{
+                    backgroundImage: `url("https://portfolio-images-2.s3.ap-south-1.amazonaws.com/TattooCover.png")`,
+                  }}
+                >
+                  <Link href="/tattoo">
+                    <div className="absolute inset-0 bg-light-blue bg-opacity-90 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+                      <p className="text-dark-gray font-semibold text-xl">
+                        Tattoo Design
+                      </p>
+                    </div>
+                  </Link>
+                </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+                {/* Airbnb */}
+                <div
+                  className="relative w-full pb-[100%] bg-left bg-cover group"
+                  style={{
+                    backgroundImage: `url("https://portfolio-images-2.s3.ap-south-1.amazonaws.com/airbnb-1.png")`,
+                  }}
+                >
+                  <Link href="/airbnb">
+                    <div className="absolute inset-0 bg-light-blue bg-opacity-90 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+                      <p className="text-dark-gray font-semibold text-xl">
+                        A clone of AirBnb
+                      </p>
+                    </div>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p className="text-light-gray font-extralight mt-2 flex text-xs items-center">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              height="12"
+              width="12"
+              alt="Copyright"
+              src="https://img.icons8.com/?size=100&id=88661&format=png&color=f7f8f3"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            All Rights Reserved to Om Thakkar
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
+    </Layout>
   );
 }
+
+export default Home;
