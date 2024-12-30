@@ -14,10 +14,14 @@ const nextConfig = {
         protocol: "https",
         hostname: "Image.icons8.com",
       },
-      //   {
-      //     protocol: "https",
-      //     hostname: "sacmsccap.blob.core.windows.net",
-      //   },
+      {
+        protocol: "https",
+        hostname: "portfolio-images-2.s3.ap-south-1.amazonaws.com",
+      },
+      {
+        protocol: "https",
+        hostname: "*",
+      },
     ],
   },
 };
